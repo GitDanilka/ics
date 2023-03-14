@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Login page</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+			button {
+				outline: none;
+				border: 1px solid black;
+				background: none;
+				margin-left: 2px;
+				font-size: 16px;
+				font-family: Montserrat;
+				font-weight: 600;
+			}
+
+			input {
+				outline: none;
+				border: none;
+				border-bottom: 1px solid black;
+				background: none;
+				color: black;
+				width: 100%;
+				font-size: 16px;
+				font-family: Montserrat;
+				font-weight: 600;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 100%; min-height: 90vh; display: flex; align-items: center;">
+			<div style="width: 100%; display: flex; flex: 1; height: max-content;">
+				<div style="flex: 1; height: 1px;"></div>
+				<div style="display: flex; flex-direction: column; flex: 1; height: max-content;">
+					<input id="login" type="email" name="login">
+					<div style="height: 4px;"></div>
+					<input id="password" type="password" name="password">
+					<div style="height: 8px;"></div>
+					<button id="login-button">Log in</button>
+				</div>
+				<div style="flex: 1; height: 1px;"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/request_settings.js"></script>
+	<script type="text/javascript">
+		document.getElementById('login-button').onclick = () => {
+			logIn(document.getElementById('login').value, document.getElementById('password').value);
+		}
+	</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Admin Page</title>
+		<link rel="stylesheet" type="text/css" href="style/admin.css">
+		<link rel="stylesheet" type="text/css" href="popup/popup.css">
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li onclick="showEdit()">Редактирование</li>
+				<li onclick="showUsers()">Пользователи</li>
+				<li onclick="showRequests()">Заявки</li>
+			</ul>
+		</header>
+		<main>
+			<div id="edit">
+				<div class="blocks" id="block1">
+					<ul>
+					</ul>
+					<button onclick="addOffer()">Добавить</button>
+				</div>
+				<hr style="max-width: 33%;">
+				<div class="blocks" id="block2">
+					<ul>
+					</ul>
+					<button onclick="addService()">Добавить</button>
+				</div>
+			</div>
+			<div id="users">
+				<ul>
+				</ul>
+				<div style="width: 100%; display: flex;"><button style="margin: auto;" onclick="addUser()">Добавить</button></div>
+			</div>
+			<div id="requests">
+				<ul>
+				</ul>
+			</div>
+		</main>
+		<div id="popup-bg">
+			<div id="popup-edit">
+				<button id="popup-close-button" onclick="closePopup()">Закрыть</button>
+				<div id="popup-body">
+				</div>
+				<button id="popup-done-button"></button>
+			</div>
+		</div>
+	</body>
+	<script>
+		var image_changed = false;
+
+		function previewImage(event, image) {
+			var reader = new FileReader();
+				reader.onload = function() {
+				var preview = document.getElementById(image);
+				preview.src = reader.result;
+			}
+			reader.readAsDataURL(event.target.files[0]);
+			image_changed = true;
+		}
+	</script>
+	<script src="js/defaults.js"></script>
+	<script src="js/request_settings.js"></script>
+	<script src="js/admin_offer.js"></script>
+	<script src="js/admin_service.js"></script>
+	<script src="js/admin_user.js"></script>
+	<script src="js/admin_request.js"></script>
+	<script src="js/admin.js"></script>
+	<script src="popup/popup.js"></script>
+</html>
