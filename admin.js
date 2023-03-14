@@ -9,6 +9,8 @@ var requests_block = document.getElementById('requests');
 var offers_block = document.getElementById('block1');
 var services_block = document.getElementById('block2');
 
+var popup = document.getElementById('popup-bg');
+
 
 function showEdit() {
 	edit_block.style.display = cssShow;
@@ -28,6 +30,17 @@ function showRequests() {
 	requests_block.style.display = cssShow;
 }
 
+function closePopup() {
+	popup.style.display = 'none';
+}
+
+function showPopup(id, name, text, img) {
+	document.getElementById('popup-name-input').value = name;
+	document.getElementById('popup-description-input').value = text;
+	document.getElementById('popup-image').src = img;
+	popup.style.display = 'flex';
+}
+
 function addListElement(list, id, name, text, img) {
 	let offer = document.createElement("li");
 	offer.id = id;
@@ -39,6 +52,7 @@ function addListElement(list, id, name, text, img) {
 	let delete_offer = document.createElement("button");
 	edit_offer.innerHTML = "Редактировать";
 	delete_offer.innerHTML = "Удалить";
+	edit_offer.onclick = () => showPopup(id, name, text, img)
 	offer.appendChild(offer_name);
 	offer.appendChild(edit_offer);
 	offer.appendChild(delete_offer);
@@ -54,6 +68,7 @@ function addListService(id, name, text, img) {
 }
 
 showEdit();
+closePopup();
 
 addListOffer("1", "Скидка 50% на установку серверов", "Что-то там типа это ну как там кароче в общем ну вы поняли")
 addListOffer("2", "Бесплатная настройка", "В комплекте с установкой, конечно же")

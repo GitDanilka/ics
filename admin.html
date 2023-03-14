@@ -33,14 +33,17 @@
 				
 			</div>
 		</main>
-		<div id="popup-edit">
-			<input id="popup-name-input" type="text"><br>
-			<textarea id="popup-description-input"></textarea>
-			<form action="/upload" method="post" enctype="multipart/form-data">
-				<input type="file" id="imageUpload" name="imageUpload" accept="image/*" onchange="previewImage(event, 'block1-img-1')">
-				<img id="popup-image" src="block1-1.png">
-			</form>
-			<button id="popup-save-button">Сохранить</button>
+		<div id="popup-bg">
+			<div id="popup-edit">
+				<button id="popup-close-button" onclick="closePopup()">Закрыть</button>
+				<input id="popup-name-input" type="text">
+				<textarea id="popup-description-input"></textarea>
+				<form action="/upload" method="post" enctype="multipart/form-data">
+					<input type="file" id="imageUpload" name="imageUpload" accept="image/*" onchange="previewImage(event, 'block1-img-1')">
+					<img id="popup-image" src="block1-1.png">
+				</form>
+				<button id="popup-save-button">Сохранить</button>
+			</div>
 		</div>
 	</body>
 	<script>

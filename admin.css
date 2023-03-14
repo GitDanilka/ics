@@ -45,11 +45,6 @@ main > div {
 	min-height: 10px;
 }
 
-main > div form {
-	display: flex;
-	flex-direction: column;
-}
-
 img {
 	max-height: 25vh;
 	width: auto;
@@ -99,7 +94,7 @@ ul input {
 	font-size: 16px;
 }
 
-#edit {
+/*#edit {
 	background: #f005;
 }
 
@@ -109,8 +104,51 @@ ul input {
 
 #requests {
 	background: #00f5;
+}*/
+
+#popup-bg {
+	position: absolute;
+	display: flex;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(4px);
+	background: #0008;
 }
 
-.dragndrop input[type="file"] {
+#popup-edit {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid black;
+	margin: auto;
+	width: 33vw;
+	max-height: 66vh;
+	position: absolute;
+	z-index: 100;
+	background: white;
+	padding: 8px;
+}
 
+#popup-edit input {
+	outline: none;
+	border: 1px solid black;
+	background: none;
+	margin-left: 2px;
+	font-size: 16px;
+	width: min-conent;
+}
+
+#popup-edit > button {
+	width: 33%;
+}
+
+#popup-edit form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
 }
