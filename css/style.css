@@ -292,6 +292,7 @@ form input[type="submit"] {
 }
 
 .service__section  .single__service {
+	cursor: pointer;
 	flex-basis: 49%;
 	padding: 0 15px;
 	position: relative;
@@ -498,17 +499,6 @@ form .inputBox i {
 
 form .inputBox input:valid ~ i,
 form .inputBox input:focus ~ i {
-	height: 44px;
-}
-
-form input[type="submit"] {
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 9px 25px;
-	background: #fff;
-	border-radius: 4px;
-	font-weight: 600;
 	height: 44px;
 }
 /* ActiveForm END */

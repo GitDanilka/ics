@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+body {
+	background-color: rgb(36, 43, 51);
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100%;
+	border-bottom: 1px solid #fff;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 1rem auto;
+}
+
+header > ul {
+	padding-left: 0;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+
+header > ul > li {
+	width: 100%;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 0.5em;
+}
+
+header > ul > li.active {
+	background-color: rgb(46, 54, 63);
+}
+
+header > ul > li::marker {
+	content: '';
+}
+
+main > div {
+	height: max-content;
+	min-height: 10px;
+}
+
+img {
+	max-height: 25vh;
+	width: auto;
+}
+
+.popup-edit, .blocks {
+	text-align: center;
+}
+
+.blocks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btn {
+	margin: 0.6rem auto 2rem;
+}
+
+.blocks > ul, #users > ul, #requests > ul {
+	width: 50%;
+	margin: auto;
+}
+
+.blocks > ul > li::marker {
+	content: '';
+}
+
+#popup-edit > button {
+	border-color: #000;
+	color: #000;
+}
+
+.li-el {
+	display: flex;
+	margin: 1rem;
+	flex-direction: row;
+}
+
+.blocks > ul > li {
+	margin: 1rem;
+}
+
+button {
+	outline: none;
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 4px;
+	padding: 5px 10px;
+	background: none;
+	margin-left: 2px;
+	font-size: 14px;
+}
+
+ul input {
+	outline: none;
+	border: none;
+	background: none;
+	color: #fff;
+	width: 100%;
+	font-size: 16px;
+}
+
+#popup-bg {
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(4px);
+	background: #0008;
+}
+
+#popup-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	border-left: none;
+	border-right: none;
+	margin: 20px 0;
+	max-width: 33vw;
+}
+
+#popup-body textarea {
+	max-width: 33vw;
+	max-height: 40vh;
+}
+
+#popup-edit {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid black;
+	margin: auto;
+	width: 33vw;
+	max-height: 66vh;
+	position: absolute;
+	z-index: 100;
+	background: white;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+#popup-edit input {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #b3b3b3;
+	background: none;
+	margin-left: 2px;
+	font-size: 16px;
+	width: 90%;
+	text-align: center;
+}
+
+#popup-edit input[type="file"] {
+	border: none;
+}
+
+#popup-close-button {
+	cursor: pointer;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	border: none;
+	width: 20px;
+	height: 20px;
+}
+
+#popup-done-button {
+	cursor: pointer;
+}
+
+#popup-edit form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+
+
+form input[type="submit"] {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 9px 25px;
+	background: #fff;
+	border-radius: 4px;
+	font-weight: 600;
+	height: 44px;
+}
+
+@media (max-width: 720px) {
+	#popup-edit, #popup-body {
+		max-width: 100vw;
+		width: initial;
+	}
+	#popup-edit > button {
+		min-width: 50%;
+		max-width: fit-content;
+		width: initial;
+	}
+}
+
+@media (max-width: 720px) {
+	header > ul {
+		flex-direction: column;
+	}
+
+	.blocks > ul {
+		width: 90%;
+	}
+}
