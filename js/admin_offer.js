@@ -41,21 +41,6 @@ function showOfferDone() {
 	}
 	data.name = document.getElementById("popup-name-input").value;
 	data.text = document.getElementById("popup-description-input").value;
-	if (image_changed) {
-		let formData = new FormData();
-		formData.append('image', file);
-		fetchAuth(`${protocol}://${server}:${port}${url_image_upload}`, {
-			method: 'POST',
-			body: formData
-		}).then(response => response.json())
-		.then(res_data => {
-			data.image = res_data.link;
-		})
-		.catch(error => {
-			console.error(error);
-		});
-	}
-	data.img = document.getElementById("popup-description-input").value;
 	createOfferHTML(id, popup.reason, data)
 	closePopup();
 	fetchAuth(`${protocol}://${server}:${port}${url_offer}${url_push_one}`, {
@@ -67,6 +52,21 @@ function showOfferDone() {
 	}).then(response => {
 		if (!response.ok) {
 			console.log("Ты чё пёс", response)
+		} else {
+			if (image_changed) {
+				let formData = new FormData();
+				formData.append('image', file);
+				fetchAuth(`${protocol}://${server}:${port}${url_image_upload}`, {
+					method: 'POST',
+					body: formData
+				}).then(response => response.json())
+				.then(res_data => {
+					data.image = res_data.link;
+				})
+				.catch(error => {
+					console.error(error);
+				});
+			}
 		}
 	});
 }

@@ -20,13 +20,13 @@ const url_push_one = "/set";
 const url_delete_one = "/delete";
 
 
-function logIn(email, password) {
+function logIn(phone, password) {
 	fetch(`${protocol}://${server}:${port}${url_login}`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({email: email, password: password})
+		body: JSON.stringify({phone: phone, password: password})
 	})
 	.then(response => {
 		if (response.ok) {

@@ -16,4 +16,9 @@ const text_user_firstname_placeholder = "Иван";
 const text_user_lastname_placeholder = "Иванов";
 const text_user_fathername_placeholder = "Иванович";
 const text_user_phone_placeholder = "89991112200";
-const text_user_email_placeholder = "example@mail.com";
+const text_user_address_placeholder = "г. Новосибир ул. Ватутина, д 62";
+
+const text_request_user_placeholder = "89991112200";
+const text_request_text_placeholder = "Запрос пользователя";
+const text_request_status_placeholder = "unread";
+const text_request_response_placeholder = "";

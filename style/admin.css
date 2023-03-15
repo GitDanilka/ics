@@ -26,6 +26,10 @@ header > ul > li {
 	cursor: pointer;
 }
 
+header > ul > li.active {
+	background: red;
+}
+
 header > ul > li::marker {
 	content: '';
 }
@@ -50,8 +54,9 @@ img {
 	align-items: center;
 }
 
-.blocks > ul {
+.blocks > ul, #users > ul, #requests > ul {
 	width: 50%;
+	margin: auto;
 }
 
 .blocks > ul > li {
@@ -82,18 +87,6 @@ ul input {
 	color: black;
 	width: 100%;
 	font-size: 16px;
-}
-
-#edit {
-	background: #f005;
-}
-
-#users {
-	background: #0f05;
-}
-
-#requests {
-	background: #00f5;
 }
 
 @media (max-width: 720px) {
