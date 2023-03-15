@@ -14,6 +14,7 @@ body {
 	font-size: 16px;
 }
 .lock {
+	padding-right: 17px;
 	overflow: hidden;
 }
 
@@ -54,16 +55,6 @@ li {
 .modal-body form .inputBox input {
 	color: #ffffff;
 }
-
-/* .modal-body form .inputBox span {
-	position: absolute;
-	left: 0;
-	padding: 20px 10px 10px;
-	pointer-events: none;
-	color: #8f8f8f;
-	letter-spacing: 1px;
-	transition: 0.5s;
-} */
 
 .modal-body form .inputBox input:valid ~ span,
 .modal-body form .inputBox input:focus ~ span {
@@ -106,6 +97,7 @@ form input[type="submit"] {
 	top: 10px;
 	right: 10px;
 	z-index: 10;
+	--bs-btn-close-focus-shadow: none;
 }
 
 .modal-footer {
@@ -121,6 +113,10 @@ form input[type="submit"] {
     left: 0;
     width: 100%;
     z-index: 2;
+}
+
+.header__tel:hover {
+	text-decoration: underline;
 }
 
 .header__burger {
@@ -339,23 +335,19 @@ form input[type="submit"] {
 	color: #fff;
 }
 
-.service__section  .single__service .content .learn_more {
-	position: relative;
+.learn_more {
+	color: #fff;
+	border-radius: 8px;
+	border: 2px solid #fff;
+	width: fit-content;
+	margin-top: 2rem;
+	padding: 0 20px;
+	margin-inline: auto;
+	transition: border .25s;
 }
 
-.service__section  .single__service .content .learn_more:after {
-	content: '';
-	position: absolute;
-	bottom: -2px;
-	left: 0;
-	right: 0;
-	height: 2px;
-	background-color: #617ee8;
-	transition: background-color .25s;
-}
-
-.service__section  .single__service:hover .content .learn_more:after {
-	background-color: #fff;
+.learn_more:hover {
+	border: 2px solid #617ee8;
 }
 
 .service__section  .single__service .circle_before {
@@ -382,8 +374,7 @@ form input[type="submit"] {
 /* Services END */
 
 /* Special */
-.special__section {
-}
+
 
 .special__section .single__service {
 	text-align: start;
@@ -393,7 +384,7 @@ form input[type="submit"] {
 }
 
 .special__section .single__service .main__title {
-
+	text-align: start;
 }
 /* Special END */
 
@@ -643,7 +634,7 @@ form input[type="submit"] {
 	width: 0.8em;
 	height: 0.8em;
 	position: absolute;
-	top: 50%;
+	top: 50.55%;
 	border-radius: 50%;
 	opacity: 0.8;
 	transform: translate(0, -50%);
@@ -681,6 +672,7 @@ form input[type="submit"] {
 /* About */
 .about_section {
 	margin-bottom: 8rem;
+	word-wrap: break-word;
 }
 
 .about_section .description {
@@ -772,10 +764,10 @@ form input[type="submit"] {
 }
 
 .services__empt {
-	height: 150px;
+	height: 80px;
 }
 .contacts__empt {
-	height: 380px;
+	height: 275px;
 }
 .page-about .about_section {
 	margin-top: -80px;
@@ -871,7 +863,7 @@ form input[type="submit"] {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: end;
 	}
 
 	.nav_list {
@@ -907,7 +899,7 @@ form input[type="submit"] {
 
 @media (max-width: 778px) {
 	.service__section .row .single__service {
-		flex-basis: 100%;
+		flex-basis: 98%;
 	}
 	
 	.contacts {
@@ -922,10 +914,6 @@ form input[type="submit"] {
 }
 
 @media (max-width: 576px) {
-	.service__section .row .single__service {
-		flex-basis: 98%;
-	}
-
 	.row {
 		justify-content: center;
 	}
@@ -943,5 +931,27 @@ form input[type="submit"] {
 @media (max-width: 375px) {
 	.about_section .description {
 		font-size: 12px;
+	}
+}
+
+@media (max-width: 280px) {
+	.main .main__title {
+		font-size: 20px;
+	}
+	
+	.main .main__subtitle {
+		font-size: 12px;
+	}
+
+	.title {
+		font-size: 16px;
+	}
+
+	.description {
+		font-size: 12px;
+	}
+
+	.service__section .single__service .content .main__title {
+		font-size: 16px;
 	}
 }
